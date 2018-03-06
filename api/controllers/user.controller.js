@@ -1,3 +1,4 @@
+'use strict';
 const mongoose = require("mongoose");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
@@ -65,7 +66,8 @@ exports.user_login = (req, res, next) => {
               email: user[0].email,
               userId: user[0]._id
             },
-            process.env.JWT_KEY,
+          //  process.env.JWT_KEY,
+              'ravichandhar',
             {
               expiresIn: "1h"
             }

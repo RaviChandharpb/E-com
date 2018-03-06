@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+'use strict';
 
 const Order = require("../models/order");
 const Product = require("../models/product");
@@ -32,6 +32,7 @@ exports.orders_get_all = (req, res, next) => {
 };
 
 exports.orders_create_order = (req, res, next) => {
+  
   Product.findById(req.body.productId)
     .then(product => {
       if (!product) {

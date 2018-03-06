@@ -1,8 +1,9 @@
+'use strict';
 const express = require("express");
 const router = express.Router();
 const multer = require('multer');
 const checkAuth = require('../middleware/check-auth');
-const ProductsController = require('../controllers/products');
+const ProductsController = require('../controllers/products.controller');
 const path = require('path');
 /*
 const storage = multer.diskStorage({

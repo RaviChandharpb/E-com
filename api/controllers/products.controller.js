@@ -1,3 +1,4 @@
+'use strict';
 const mongoose = require("mongoose");
 const Product = require("../models/product");
 
@@ -38,7 +39,6 @@ exports.products_get_all = (req, res, next) => {
 };
 
 exports.products_create_product = (req, res, next) => {
-
   const product = new Product({
 	  
     _id: new mongoose.Types.ObjectId(),

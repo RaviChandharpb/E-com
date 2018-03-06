@@ -1,12 +1,14 @@
+'use strict';
+
 const express = require("express");
 const app = express();
 const morgan = require("morgan");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const config = require('./config/database');
-const productRoutes = require("./api/routes/products");
-const orderRoutes = require("./api/routes/orders");
-const userRoutes = require('./api/routes/user');
+const productRoutes = require("./api/routes/products.routes");
+const orderRoutes = require("./api/routes/orders.routes");
+const userRoutes = require('./api/routes/user.routes');
 
 
 mongoose.connect(config.database, { useMongoClient: true});
