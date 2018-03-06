@@ -11,7 +11,7 @@ exports.user_signup = (req, res, next) => {
     .then(user => {
       if (user.length >= 1) {
         return res.status(409).json({
-          message: "Mail exists"
+          message: "User exists"
         });
       } else {
         bcrypt.hash(req.body.password, 10, (err, hash) => {

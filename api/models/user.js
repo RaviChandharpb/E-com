@@ -1,8 +1,7 @@
 'use strict';
 
-const mongoose = require('mongoose');
-
-const userSchema = mongoose.Schema({
+const mongoose = require('mongoose'),
+	  userSchema = mongoose.Schema({
     _id: mongoose.Schema.Types.ObjectId,
     email: { 
         type: String, 

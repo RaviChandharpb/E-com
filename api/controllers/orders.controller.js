@@ -1,7 +1,8 @@
 'use strict';
 
-const Order = require("../models/order");
-const Product = require("../models/product");
+const Order = require("../models/order"),
+      Product = require("../models/product"),
+      mongoose = require('mongoose');
 
 exports.orders_get_all = (req, res, next) => {
   Order.find()
