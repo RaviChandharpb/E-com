@@ -64,7 +64,7 @@ function checkFileType(file, cb){
   }
 }
 
-router.get("/", ProductsController.products_get_all);
+router.get("/",checkAuth,  ProductsController.products_get_all);
 
 //router.post("/", checkAuth,  ProductsController.products_create_product);
 
